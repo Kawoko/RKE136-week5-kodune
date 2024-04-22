@@ -12,7 +12,14 @@ html{
     text-align: center;
 }
 
-img {
+.movie-card {
+    margin-top: 5rem;
+    text-align: center;
+
+    animation: slideFromTop 1s ease-in-out forwards;
+}
+
+.movie-card img {
     height: 500px;
     border-radius: 15px;
 
@@ -20,16 +27,9 @@ img {
     margin-bottom: 1rem;
 }
 
-img:hover {
+.movie-card img:hover {
     transform: scale(1.1);
     box-shadow: 5px 5px 10px rgba(97, 56, 114, 0.5);
-}
-
-.movie-card {
-    margin-top: 5rem;
-    text-align: center;
-
-    animation: slideFromTop 1s ease-in-out forwards;
 }
 
 .movie-title {
@@ -192,3 +192,52 @@ footer ul li a {
 .movie-poster-modal {
     width: 300px;
 }
+
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+
+}
+
+.carousel .carousel__item, 
+.carousel .carousel__item--hidden {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn .6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    cursor: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgb(98, 85, 68, 0.739);
+    font-size: 2rem;
+    color: #fff;
+    margin: 0.5rem;
+ }
